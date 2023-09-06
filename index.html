@@ -118,8 +118,8 @@
                 <p id="saidaMap">Resultado do map aqui!</p>
 
                 <script>
-                    lista = [10, 20, 30, 40];
-                    resultado = lista.map((elem) => elem**2)
+                    const lista = [10, 20, 30, 40];
+                    const resultado = lista.map((elem) => elem**2)
                     document.getElementById("saidaMap").textContent = resultado;
                 </script>
 
@@ -134,8 +134,8 @@
 
                 
                 <script>
-                    lista2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                    resultado2 = lista2.filter((elem) => (elem%2 == 0))
+                    const lista2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                    const resultado2 = lista2.filter((elem) => (elem%2 == 0))
                     document.getElementById("saidaFilter").textContent = resultado2
 
                 </script>
@@ -144,6 +144,8 @@
 
                 <p>Mostre no elemento com id "saidaReduce" a soma de todos os elementos da lista abaixo.</p>
 
+                <p>1, 2, 3, 4, 5</p>
+
             
                 
                 <p>Use para isso a função <code>reduce</code>. <strong>Resultado: </strong></p>
@@ -151,12 +153,17 @@
                 <p id="saidaReduce">Resultado do reduce aqui!</p>
 
                 <script>
-                    //adicione aqui o script para resolução do Exercício 12 
+                    const lista3 = [1, 2, 3, 4, 5]
+                    const resultado3 = lista3.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+                    document.getElementById("saidaReduce").textContent = resultado3;
+
                 </script>
 
             <h3>Exercício 13</h3>
 
                 <p>Mostre no elemento com id "saidaParesAoQuadradoMais42" a soma dos quadrados dos elementos pares da lista abaixo, mais 42. </p>
+
+                <p>1, 2, 3, 4, 5</p>
 
     
             
@@ -164,7 +171,14 @@
                 <p id="saidaParesAoQuadradoMais42">Resultado aqui</p>
 
                 <script>
-                    //adicione aqui o script para resolução do Exercício 13 
+                    const lista4 = [1, 2, 3, 4, 5];
+                    const parte1 = lista4.map((elem) => elem**2);
+                    let parte2 = parte1.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+                    parte2 += 42;
+                    document.getElementById("saidaParesAoQuadradoMais42").textContent = parte2;
+
+
+
                 </script>
 
 </body>
